@@ -12,12 +12,12 @@ if len(name) <= 2:
     print("Your name is too short")
 
 if board_size > 0 and board_size < 26 and name != None:
-    grid_size = board_size**2
+    board_size = board_size**2
 else:
     board_size = None
     print(f"{name}, you have entered illegal board size")
 
-if  number_of_mines > 0 and number_of_mines <= grid_size/2 and name != None and board_size != None:
+if  number_of_mines > 0 and number_of_mines <= board_size/2 and name != None and board_size != None:
     number_of_mines = number_of_mines
 else:
     number_of_mines = None
