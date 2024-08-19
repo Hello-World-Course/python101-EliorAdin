@@ -40,9 +40,11 @@ def register_user():
         else:
             board_size = None
             print(f"{name}, you have entered illegal board size")
+            return name, board_size, number_of_mines
     else:
         print("Your name is too short")
         name = None
+        return name, board_size, number_of_mines
 
 
 
