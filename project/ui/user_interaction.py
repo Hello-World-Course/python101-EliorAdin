@@ -4,18 +4,18 @@
 #print(f"{name}, the board size is: {b_size}, number of mines is: anfkja")
 
 name = input('Hello, whats your name')
+board_size = int(input(f"{name}, please choose board size"))
+number_of_mines = int(input(f"{name}, for board size {board_size}, choose number of mines to allocate"))
 
 if len(name) <= 2:
     name = None
     print("Your name is too short")
-board_size = int(input(f"{name}, please choose board size"))
 
 if board_size > 0 and board_size < 26:
         grid_size = board_size**2
 else:
     board_size = None
     print(f"{name}, you have entered illegal board size")
-number_of_mines = int(input(f"{name}, for board size {board_size}, choose number of mines to allocate"))
 
 if  number_of_mines > 0 and number_of_mines <= grid_size/2:
     number_of_mines = number_of_mines
