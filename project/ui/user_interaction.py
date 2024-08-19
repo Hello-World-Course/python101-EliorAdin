@@ -7,6 +7,8 @@ name = input('Hello, whats your name')
 
 if len(name) <= 2:
     name = None
+    board_size = None
+    number_of_mines = None
     print("Your name is too short")
 else:
     board_size = int(input(f"{name}, please choose board size"))
@@ -16,11 +18,11 @@ if board_size > 0 and board_size < 26:
     grid_size = board_size**2
 else:
     board_size = None
+    number_of_mines = None
     print(f"{name}, you have entered illegal board size")
 
-if  number_of_mines > 0 and number_of_mines <= grid_size/2:
+if  number_of_mines != None andnumber_of_mines > 0 and number_of_mines <= grid_size/2:
     number_of_mines = number_of_mines
 else:
-    number_of_mines = None
     print(f"{name}, you have entered illegal number of mines")
 
