@@ -6,4 +6,4 @@
 name =input('Hello, whats your name')
 board_size = input(f"{name}, please choose board size")
 number_of_mines = input(f"{name}, for board size {board_size}, choose number of mines to allocate")
-print(f"{name}, for board size: {board_size}, number of mines: {number_of_mines}")
+#print(f"{name}, for board size: {board_size}, number of mines: {number_of_mines}")
