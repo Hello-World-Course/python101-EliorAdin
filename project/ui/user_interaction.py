@@ -5,16 +5,24 @@
 def is_name_valid(name):
     if len(name) > 2:
         return True
+    else:
+        return False
 
 def is_board_size_valid(board_size):
     if board_size > 0 and board_size < 26:
         return True
+    else:
+        return False
+
 
 def is_number_of_mines_valid(board_size, number_of_mines):
     grid_size = board_size ** 2
     half_grid_size = grid_size / 2
     if number_of_mines > 0 and number_of_mines <= half_grid_size:
         return True
+    else:
+        return False
+
 
 def register_user():
     name = input('Hello, whats your name')
