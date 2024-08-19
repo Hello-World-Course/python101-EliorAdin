@@ -35,6 +35,8 @@ def register_user():
             if not is_number_of_mines_valid(board_size, number_of_mines):
                 number_of_mines = None
                 print(f"{name}, you have entered illegal number of mines")
+            else:
+                return name, board_size, number_of_mines
         else:
             board_size = None
             print(f"{name}, you have entered illegal board size")
@@ -43,7 +45,7 @@ def register_user():
         name = None
 
 
-    return name, board_size, number_of_mines
+
 
 
 
