@@ -19,7 +19,7 @@ else:
     exit(f"{name}, you have entered illegal board size")
 
 if  number_of_mines > 0 and number_of_mines <= grid_size/2:
-    print('Good job, lets begin')
+    number_of_mines = number_of_mines
 else:
     number_of_mines = None
     exit(f"{name}, you have entered illegal number of mines")
