@@ -18,7 +18,7 @@ else:
         if number_of_mines != None and number_of_mines > 0 and number_of_mines <= grid_size / 2:
             number_of_mines = number_of_mines
         else:
-            print(f"{name}, you have entered illegal number of mines"
+            print(f"{name}, you have entered illegal number of mines")
     else:
         board_size = None
         number_of_mines = None
