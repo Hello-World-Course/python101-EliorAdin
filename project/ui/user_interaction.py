@@ -44,7 +44,7 @@ def register_user():
             return name, board_size, number_of_mines
     else:
         print("Your name is too short")
-        name = ""
+        name = None
         return name, board_size, number_of_mines
 
 
