@@ -53,5 +53,5 @@ def register_user():
 
 
 
-user_name, user_board_size, user_num_mines = register_user()
-print(f"name:{user_name}, board size:{user_board_size}, number of mines:{user_num_mines}")
+#user_name, user_board_size, user_num_mines = register_user()
+#print(f"name:{user_name}, board size:{user_board_size}, number of mines:{user_num_mines}")
