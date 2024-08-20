@@ -4,7 +4,7 @@
 #print(f"{name}, the board size is: {b_size}, number of mines is: anfkja")
 def is_name_valid(name):
     if len(name) > 2:
-        return True , name
+        return True
     else:
         return False
 
