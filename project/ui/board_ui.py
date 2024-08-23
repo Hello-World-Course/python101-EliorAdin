@@ -19,5 +19,5 @@ def draw_board(board):
         print (s)
 
 def convert_coords(location):
-
+    pass
 draw_board(board)
