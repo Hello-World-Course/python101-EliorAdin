@@ -18,3 +18,13 @@ def safe_set_value(x, y, value, board):
     else:
         return False
 
+def create_empty_board(board_size, initial_value):
+    board = []
+    for i in range(board_size):
+        board.append([])
+        for _ in range(board_size):
+            board[i].append(initial_value)
+
+    print(board)
+
+create_empty_board(9, 0)
