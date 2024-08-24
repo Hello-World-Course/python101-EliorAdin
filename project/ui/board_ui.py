@@ -30,5 +30,3 @@ def convert_coords(location):
     col_number = ord(col_number) - ord('A')
     return row_number, col_number
 
-print(convert_coords('G42'))
-draw_board(board)

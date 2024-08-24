@@ -27,4 +27,3 @@ def create_empty_board(board_size, initial_value):
 
     print(board)
 
-create_empty_board(2, "_")
