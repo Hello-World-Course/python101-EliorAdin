@@ -20,9 +20,9 @@ def draw_board(board):
         lines.append(line)
     for i in lines:
         if lines[0] == i:
-            s = "   ".join(i) + '\n'
+            s = " ".join(i) + '\n'
         else:
-            s = " | ".join(i) + '\n'
+            s = "|".join(i) + '\n'
         matrix += s
     return matrix
 
