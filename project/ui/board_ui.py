@@ -1,7 +1,3 @@
-from bokeh.colors.named import linen
-
-import project.board.board_functions as bc
-
 
 def parse_cmd(command):
     command_name = command.split(" ")[0]
