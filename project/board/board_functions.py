@@ -24,6 +24,7 @@ def create_empty_board(board_size, initial_value):
         board.append([])
         for _ in range(board_size):
             board[i].append(initial_value)
+    return board
 
     print(board)
 
