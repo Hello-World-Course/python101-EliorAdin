@@ -19,5 +19,16 @@ def draw_board(board):
         print (s)
 
 def convert_coords(location):
-    pass
+    row_number = ""
+    col_number  = ""
+    for i in location:
+        if (i.isdigit()):
+            row_number += i
+        else:
+            col_number  += i
+    row_number = int(row_number)
+    col_number = ord(col_number) - ord('A')
+    return row_number, col_number
+
+print(convert_coords('G42'))
 draw_board(board)
