@@ -10,11 +10,11 @@ def draw_board(board):
     matrix = ""
     for i in range(len(board)):
         if i == 0:
-            first_line.append(" ")
+            first_line.append("  ")
         first_line.append(chr(65 + i))
     lines.append(first_line)
     for i in range(len(board)):
-        line = [str(i)]
+        line = [str(i)+" "]
         for k in board[i]:
             line.append(str(k))
         lines.append(line)
