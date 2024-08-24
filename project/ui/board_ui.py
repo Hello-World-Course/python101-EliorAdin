@@ -1,23 +1,38 @@
+from bokeh.colors.named import linen
+
+import project.board.board_functions as bc
+
+
 def parse_cmd(command):
     command_name = command.split(" ")[0]
     parameters = command.split(" ")[1:len(command)]
     return command_name, parameters
 
 board = [["_",2,"_"], ["_",1,"_"], ["_",0,"_"]]
-
+board = bc.create_empty_board(2,'_')
 def draw_board(board):
-    fist_line = []
+    first_line = []
+    lines = []
+    matrix = ""
     for i in range(len(board)):
-        fist_line.append(chr(65 + i))
-        s = "   ".join(fist_line)
-    print("    " +s)
+        if i == 0:
+            first_line.append(" ")
+        first_line.append(chr(65 + i))
+    lines.append(first_line)
     for i in range(len(board)):
         line = [str(i)]
         for k in board[i]:
             line.append(str(k))
-            s = " | ".join(line)
-        print (s)
-    return s
+        lines.append(line)
+    for i in lines:
+        if lines[0] == i:
+            s = "   ".join(i) + '\n'
+        else:
+            s = " | ".join(i) + '\n'
+        matrix += s
+    return matrix
+
+print(draw_board(board))
 
 def convert_coords(location):
     row_number = ""
