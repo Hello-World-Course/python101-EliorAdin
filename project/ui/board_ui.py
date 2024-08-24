@@ -8,8 +8,6 @@ def parse_cmd(command):
     parameters = command.split(" ")[1:len(command)]
     return command_name, parameters
 
-board = [["_",2,"_"], ["_",1,"_"], ["_",0,"_"]]
-board = bc.create_empty_board(2,'_')
 def draw_board(board):
     first_line = []
     lines = []
