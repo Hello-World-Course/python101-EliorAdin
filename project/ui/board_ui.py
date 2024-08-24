@@ -17,6 +17,7 @@ def draw_board(board):
             line.append(str(k))
             s = " | ".join(line)
         print (s)
+    return s
 
 def convert_coords(location):
     row_number = ""
