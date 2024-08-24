@@ -30,7 +30,6 @@ def draw_board(board):
         matrix += s
     return matrix
 
-print(draw_board(board))
 
 def convert_coords(location):
     row_number = ""
