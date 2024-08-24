@@ -16,7 +16,7 @@ def draw_board(board):
     for i in range(len(board)):
         line = [str(i)+" "]
         for k in board[i]:
-            line.append(str(k))
+            line.append(str(k) + ' ')
         lines.append(line)
     for i in lines:
         if lines[0] == i:
