@@ -11,7 +11,7 @@ def draw_board(board):
     for i in range(len(board)):
         if i == 0:
             first_line.append("  ")
-        first_line.append(chr(65 + i) + ' ')
+        first_line.append(chr(65 + i))
     lines.append(first_line)
     for i in range(len(board)):
         line = [str(i)+" "]
@@ -20,7 +20,7 @@ def draw_board(board):
         lines.append(line)
     for i in lines:
         if lines[0] == i:
-            s = " ".join(i) + '\n'
+            s = " ".join(i) + ' \n'
         else:
             s = "|".join(i) + '|\n'
         matrix += s
