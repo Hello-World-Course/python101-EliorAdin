@@ -22,11 +22,11 @@ def draw_board(board):
         if lines[0] == i:
             s = " ".join(i) + '\n'
         else:
-            s = "|".join(i) + '\n'
+            s = "|".join(i) + '|\n'
         matrix += s
     return matrix
 
-
+print(draw_board([['_','_'],['_','_']]))
 def convert_coords(location):
     row_number = ""
     col_number  = ""
