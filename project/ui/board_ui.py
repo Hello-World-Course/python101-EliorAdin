@@ -26,7 +26,7 @@ def draw_board(board):
         matrix += s
     return matrix
 
-print(draw_board([['_','_'],['_','_']]))
+
 def convert_coords(location):
     row_number = ""
     col_number  = ""
