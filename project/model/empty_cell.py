@@ -5,7 +5,7 @@ class EmptyCell(Cell):
         super().__init__(x, y)
         self.x = x
         self.y = y
-        self.value = "_"
+        self.value = ""
 
     def set_value(self, value):
         if 0 < value <= 8:
@@ -17,10 +17,8 @@ class EmptyCell(Cell):
         return self.value
 
     def str_as_clicked(self):
-        if self.value:
-            val = self.get_value()
-            return str(val)
-        else:
-            pass
+        if self.is_clicked():
+            return str(self.get_value())
+
 
 

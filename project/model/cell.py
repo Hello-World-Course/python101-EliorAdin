@@ -1,5 +1,7 @@
 # This is a start of a Cell, this code is WRONG
 # Fix it and add all the required capabilities
+from IPython.core.magic import cell_magic
+from sympy.codegen.ast import continue_
 from twisted.words.xish.domish import elementStream
 
 
@@ -17,10 +19,8 @@ class Cell:
     def set_clicked(self):
         self.clicked = True
 
-    def set_flag(self ,x ,y):
+    def set_flag(self):
         self.flag = True
-        self.x = x
-        self.y = y
 
     def is_flaged(self):
         return self.flag
@@ -28,17 +28,22 @@ class Cell:
     def str_as_hidden(self):
         if not self.is_clicked() and not self.is_flaged():
             self.flag = '_'
+            return self.flag
         elif self.is_flaged():
             self.flag = 'F'
+            return self.flag
 
     def str_as_clicked(self):
         try:
-            pass
+            if self.is_clicked():
+                return str(self.clicked)
         except NotImplementedError as e:
-             return f"Invalid input: {str(e)}"
+            return f"Invalid input: {str(e)}"
 
     def __str__(self):
-        if not self.is_clicked:
-            return str(self.str_as_hidden())
-        else:
-            return str(self.str_as_clicked())
+        if self.is_clicked():
+            return self.str_as_clicked()
+        elif self.is_flaged():
+            return self.str_as_hidden()
+
+

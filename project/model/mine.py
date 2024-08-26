@@ -10,13 +10,13 @@ class Mine(Cell):
 
 
     def str_as_clicked(self):
-        if self.clicked:
+        if self.is_clicked():
             self.clicked = '*'
-            return str(self.clicked)
+            return self.clicked
         else:
-            self.clicked = ' '
-            return str(self.clicked)
+            self.clicked = '_'
+            return self.clicked
 
-mine = Mine(x=3 ,y=3)
-print(mine)
+
+
 
