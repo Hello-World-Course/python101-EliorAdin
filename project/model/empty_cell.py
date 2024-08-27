@@ -5,13 +5,14 @@ class EmptyCell(Cell):
         super().__init__(x, y)
         self.x = x
         self.y = y
-        self.value = ""
+        self.value = " "
 
     def set_value(self, value):
         if 0 < value <= 8:
             self.value = value
-        elif 0 == value:
-            self.value = " "
+
+
+
 
     def get_value(self):
         return self.value

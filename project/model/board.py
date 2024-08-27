@@ -17,20 +17,25 @@ class Board():
         return len(self.inner_board)
 
     def __getitem__(self, key):
+        print(type(key))
+        print("-------")
+        print(str(self.inner_board[key]))
         return self.inner_board[key]
 
 
     def set_flag(self,x ,y):
-        self.inner_board[x][y].__str__()
+        self.inner_board[x][y].set_flag()
 
     def reveal_all(self):
         for i in range(len(self.inner_board)):
             for j in range(len(self.inner_board[i])):
                 if not self.inner_board[i][j].is_clicked():
                     self.inner_board[i][j].set_clicked()
-                    return self.inner_board[i][j].str_as_clicked()
+                    self.inner_board[i][j].str_as_clicked()
 
-
+    def click(self,x ,y):
+        self.inner_board[x][y].set_clicked()
+'''
 def draw_board(board):
     first_line = []
     lines = []
@@ -55,22 +60,4 @@ def draw_board(board):
             s = "|".join(i) + '|\n'
         matrix += s
     return matrix
-board = Board(3)
-# will print True
-print(isinstance(board[0][0], EmptyCell))
-
-# will print 3
-print(len(board))
-
-
-board[1][2] = Mine(x=1, y=2)
-board[0][2] = Mine(x=0, y=2)
-board[0][1].set_value(1)
-board[1][1].set_value(2)
-board[2][1].set_value(1)
-board[2][2].set_value(1)
-board[2][2].set_flag()
-
-
-board.reveal_all()
-print(draw_board(board))
+'''
