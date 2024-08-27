@@ -43,7 +43,8 @@ class Cell:
     def __str__(self):
         if self.is_clicked():
             return self.str_as_clicked()
-        elif self.is_flaged():
+        else:
             return self.str_as_hidden()
+
 
 

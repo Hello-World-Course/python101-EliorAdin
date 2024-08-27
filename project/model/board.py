@@ -17,11 +17,7 @@ class Board():
         return len(self.inner_board)
 
     def __getitem__(self, key):
-        print(type(key))
-        print("-------")
-        print(str(self.inner_board[key]))
         return self.inner_board[key]
-
 
     def set_flag(self,x ,y):
         self.inner_board[x][y].set_flag()
@@ -35,29 +31,4 @@ class Board():
 
     def click(self,x ,y):
         self.inner_board[x][y].set_clicked()
-'''
-def draw_board(board):
-    first_line = []
-    lines = []
-    matrix = ""
-    for i in range(len(board)):
-        if i == 0:
-            first_line.append("  ")
-        first_line.append(chr(65 + i))
-    lines.append(first_line)
-    for i in range(len(board.inner_board)):
-        line = [str(i) + " "]
-        for j in range(len(board.inner_board[i])):
-            if not board[i][j].is_clicked():
-                line.append(board[i][j].str_as_hidden())
-            else:
-                line.append(board[i][j].str_as_clicked())
-        lines.append(line)
-    for i in lines:
-        if lines[0] == i:
-            s = " ".join(i) + ' \n'
-        else:
-            s = "|".join(i) + '|\n'
-        matrix += s
-    return matrix
-'''
+
