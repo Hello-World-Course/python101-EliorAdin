@@ -1,12 +1,9 @@
 from matplotlib.pyplot import get_current_fig_manager
 from sympy.physics.units import current
-
 import project.ui.user_interaction as ui
 from project.model.board import Board
 import board_ui as b_ui
-from project.model.mine import Mine
-from project.model.empty_cell import EmptyCell
-import IPython
+
 
 class Terminal():
 
