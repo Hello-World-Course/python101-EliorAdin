@@ -1,5 +1,5 @@
-#from matplotlib.pyplot import get_current_fig_manager
-#from sympy.physics.units import current
+from matplotlib.pyplot import get_current_fig_manager
+from sympy.physics.units import current
 
 import project.ui.user_interaction as ui
 from project.model.board import Board
