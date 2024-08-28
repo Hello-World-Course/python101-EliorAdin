@@ -23,6 +23,7 @@ class Terminal():
                 self.current_board = Board(self.board_size)
 
 
+
     def create_string_(self):
         return b_ui.draw_board(self.current_board)
 
