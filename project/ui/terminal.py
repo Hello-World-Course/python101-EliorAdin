@@ -33,4 +33,15 @@ class Terminal:
 
 
 
+terminal = Terminal()
+terminal.init_game()
+
+terminal.draw()
+terminal.current_board[0][0] = Mine(x=0, y=0)
+terminal.current_board[0][1].set_value(1)
+terminal.current_board[1][0].set_value(1)
+terminal.current_board[1][1].set_value(1)
+terminal.current_board.reveal_all()
+
+terminal.draw()
 
