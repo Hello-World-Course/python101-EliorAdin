@@ -11,15 +11,13 @@ class EmptyCell(Cell):
         if 0 < value <= 8:
             self.value = value
 
-
-
-
     def get_value(self):
         return self.value
 
     def str_as_clicked(self):
-        if self.is_clicked():
-            return str(self.get_value())
+        # if self.is_clicked():
+        return str(self.get_value())
+        # return str(self.value)
 
 
 
