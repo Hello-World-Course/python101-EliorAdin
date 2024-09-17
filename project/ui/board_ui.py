@@ -4,6 +4,7 @@ def parse_cmd(command):
     parameters = command.split(" ")[1:len(command)]
     return command_name, parameters
 
+
 def draw_board(board):
     first_line = []
     lines = []
