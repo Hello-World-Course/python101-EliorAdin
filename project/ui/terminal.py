@@ -2,7 +2,7 @@
 #from sympy.physics.units import current
 import project.ui.user_interaction as ui
 from project.model.board import Board
-import board_ui as b_ui
+import project.ui.board_ui as b_ui
 from project.model.mine import Mine
 
 class Terminal:
