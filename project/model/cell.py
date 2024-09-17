@@ -1,8 +1,8 @@
 # This is a start of a Cell, this code is WRONG
 # Fix it and add all the required capabilities
-from IPython.core.magic import cell_magic
-from sympy.codegen.ast import continue_
-from twisted.words.xish.domish import elementStream
+# from IPython.core.magic import cell_magic
+# from sympy.codegen.ast import continue_
+# from twisted.words.xish.domish import elementStream
 
 
 class Cell:
